@@ -19,6 +19,11 @@ public class MainClass {
         mainThread.start();
         if (daemon.isAlive()) {
             System.out.println("Изгоняем демона...");
+            try {
+                mainThread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             System.out.println("Демон изгнан");
         }
     }
